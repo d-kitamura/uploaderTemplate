@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 $tempfile = $_FILES['fname']['tmp_name'];
-$dir = './uploadedFile/'; // アップロード先のディレクトリ名
+$dir = './uploadedFile/'; // アップロード先のディレクトリ名（HTMLからのpathではなくこのphpファイルからのpathである点に注意）
 $filename = $dir . $_FILES['fname']['name']; // ディレクトリ名＋ファイル名
 date_default_timezone_set('Asia/Tokyo'); // タイムゾーンを設定（ファイルの更新日時表示のため）
 
